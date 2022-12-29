@@ -1,0 +1,5 @@
+{
+  "remove-empty-lines.runOnSave":true,
+  "remove-empty-lines.allowedNumberOfEmptyLines":0,
+  "files.exclude": {}
+}
