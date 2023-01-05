@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
-    //private PlayerAnimation player_Animation;
+    private CharacterAnimation player_Anim;
     private Rigidbody myBody;
     public float walk_Speed = 2f;
     public float z_Speed = 1.5f;
@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         myBody = GetComponent<Rigidbody>();
-        //player_Animation = GetComponentInChildren<PlayerAnimation>();
+        player_Anim = GetComponentInChildren<CharacterAnimation>();
     }
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         RotatePlayer();
+        AnimatePlayerWalk();
     }
     void FixedUpdate()
     {
@@ -44,6 +45,19 @@ public class PlayerMovement : MonoBehaviour
         else if(Input.GetAxisRaw(Axis.HORIZONTAL_AXIS) < 0)
         {
             transform.rotation = Quaternion.Euler(0f, Mathf.Abs(rotation_Y), 0f);
+        }
+    }
+    void AnimatePlayerWalk()
+    {
+        bool isMovingOnX = Input.GetAxisRaw(Axis.HORIZONTAL_AXIS) != 0;
+        bool isMovingOnY = Input.GetAxisRaw(Axis.VERTICAL_AXIS) != 0;
+        if(isMovingOnX || isMovingOnY)
+        {
+            player_Anim.Walk(true);
+        }
+        else
+        {
+            player_Anim.Walk(false);
         }
     }
 }
