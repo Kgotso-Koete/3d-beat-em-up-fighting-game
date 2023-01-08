@@ -56,4 +56,8 @@ public class CharacterAnimationDelegate : MonoBehaviour
             right_Leg_Attack_Point.SetActive(false);
         }
     }
+    void TagLeft_Arm()
+    {
+        left_Arm_Attack_Point.tag = Tags.LEFT_ARM_TAG;
+    }
 }
