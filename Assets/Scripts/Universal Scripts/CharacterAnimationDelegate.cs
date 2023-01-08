@@ -10,6 +10,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
     [SerializeField]
     private AudioClip whoosh_Sound, fall_Sound, ground_Hit_Sound, dead_Sound;
     private EnemyMovement enemy_Movement;
+    private ShakeCamera shakeCamera;
     void Awake()
     {
         animationScript = GetComponent<CharacterAnimation>();
@@ -18,6 +19,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
         {
             enemy_Movement = GetComponentInParent<EnemyMovement>();
         }
+        shakeCamera = GameObject.FindWithTag(Tags.MAIN_CAMERA_TAG).GetComponent<ShakeCamera>();
     }
     // Start is called before the first frame update
     void Start()
@@ -130,5 +132,9 @@ public class CharacterAnimationDelegate : MonoBehaviour
         enemy_Movement.enabled = true;
         // set to enemy layer to enable collision
         transform.parent.gameObject.layer = 10;
+    }
+    void ShakeCameraOnFall()
+    {
+        shakeCamera.ShouldShake = true;
     }
 }
