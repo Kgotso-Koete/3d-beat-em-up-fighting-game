@@ -12,6 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39d51dc0b20de94fa8cbac4950225ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6997524939642020282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289599957739678111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b618be3250a3cf446adec2bf9205635d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left_Arm_Attack_Point: {fileID: 0}
+  right_Arm_Attack_Point: {fileID: 0}
+  left_Leg_Attack_Point: {fileID: 0}
+  right_Leg_Attack_Point: {fileID: 0}
+  stand_Up_Timer: 2
 --- !u!1 &3289599959623923559
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ddc926d31aae247801e92e4c6431b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  is_Player: 0
 --- !u!1001 &3289599957739712319
 PrefabInstance:
   m_ObjectHideFlags: 0

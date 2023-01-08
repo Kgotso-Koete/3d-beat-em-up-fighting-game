@@ -42,6 +42,7 @@ public class HealthScript : MonoBehaviour
         {
             if(knockDown)
             {
+                // 50/50 chance of knock down
                 if(Random.Range(0,2) > 0)
                 {
                     animationScript.KnockDown();
@@ -49,6 +50,7 @@ public class HealthScript : MonoBehaviour
             }
             else
             {
+                // 33% chance of hit
                 if(Random.Range(0,3) > 1)
                 {
                     animationScript.Hit();
