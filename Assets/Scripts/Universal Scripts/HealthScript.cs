@@ -8,9 +8,14 @@ public class HealthScript : MonoBehaviour
     private EnemyMovement enemyMovement;
     private bool characterDied;
     public bool is_Player;
+    private HealthUI health_UI;
     void Awake()
     {
         animationScript = GetComponentInChildren<CharacterAnimation>();
+        if(is_Player)
+        {
+            health_UI = GetComponent<HealthUI>();
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -28,6 +33,11 @@ public class HealthScript : MonoBehaviour
         }
         health -= damage;
         //display health UI
+        if(is_Player)
+        {
+            health_UI.DisplayHealth(health);
+        }
+        // check if character died
         if(health <= 0f)
         {
             animationScript.Death();
