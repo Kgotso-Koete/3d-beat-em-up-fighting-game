@@ -143,7 +143,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
     }
     void DeactivateGameObject()
     {
-        // Enemy.instance.SpawnEnemy();
+        EnemyManager.instance.SpawnEnemy();
         gameObject.SetActive(false);
     }
 }
