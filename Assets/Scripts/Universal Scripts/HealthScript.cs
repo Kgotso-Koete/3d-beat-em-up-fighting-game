@@ -35,6 +35,7 @@ public class HealthScript : MonoBehaviour
             // if is player then deactivate enemy script
             if(is_Player)
             {
+                GameObject.FindWithTag(Tags.ENEMY_TAG).GetComponent<EnemyMovement>().enabled = false;
             }
             return;
         }

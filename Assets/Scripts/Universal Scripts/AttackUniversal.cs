@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// https://youtu.be/gcF66q-UPCs?t=14595
 public class AttackUniversal : MonoBehaviour
 {
     public LayerMask collisionLayer;
@@ -49,6 +50,10 @@ public class AttackUniversal : MonoBehaviour
                 {
                     hit[0].GetComponent<HealthScript>().ApplyDamage(damage,false);
                 }
+            }
+            if(is_Enemy)
+            {
+                hit[0].GetComponent<HealthScript>().ApplyDamage(damage,false);
             }
             // set game object as inactive to avoid multiple/concurrent collisions
             gameObject.SetActive(false);

@@ -47,7 +47,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   radius: 1
-  damage: 2
+  damage: 5
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -98,7 +98,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   radius: 1
-  damage: 2
+  damage: 5
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -149,7 +149,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   radius: 1
-  damage: 2
+  damage: 5
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -200,7 +200,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   radius: 1
-  damage: 2
+  damage: 5
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
